@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karla may nails</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #3498db;
+            padding: 10px;
+            text-align: center;
+            color: Writhe;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+            padding: 10px 0;
+            border-bottom: 2px solid #ddd;
+        }
+        .tabs button {
+            background-color: transparent;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #3498db;
+        }
+        .tabs button.active {
+            font-weight: bold;
+            border-bottom: 2px solid #3498db;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }
+        .product-image img {
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .buy-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .social-media {
+            text-align: center;
+        }
+        .social-media a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3498db;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Karla May Nails</h1>
+    </div>
+    <div class="tabs">
+        <button class="tab-link active" onclick="showTab('bienvenida')">Bienvenida</button>
+        <button class="tab-link" onclick="showTab('producto')">Producto</button>
+        <button class="tab-link" onclick="showTab('redes-sociales')">Redes Sociales</button>
+    </div>
+
+    <div class="container">
+        <!-- Pestaña Bienvenida -->
+        <div id="bienvenida" class="content active">
+            <h2>Bienvenidos a nuestra página</h2>
+ <img src="Imagen5.png" alt=>
+            <p>Misión: Nuestra misión es ofrecer servicios de manicura, el servicio de uñas press- on y uñas acrilicas, ademas de pedicura de alta calidad, utilizando productos seguros y sostenibles, para realzar la belleza y el bienestar de nuestros clientes. Nos comprometemos a brindar una experiencia única y personalizada en un ambiente acogedor y profesional, donde cada cliente se sienta valorado y satisfecho.
+</p>
+            <p>Visión: Nuestra visión es ser reconocidos como líderes en la industria de la belleza de uñas, innovando constantemente en técnicas y productos, y promoviendo la salud y el cuidado de las uñas. Aspiramos a crear una comunidad de amantes de la belleza que se sientan inspirados y empoderados a través de nuestros servicios, contribuyendo al bienestar y la autoestima de cada persona que nos visita.</p>
+        </div>
+
+        <!-- Pestaña Producto -->
+        <div id="producto" class="content">
+            <h2>Unas Acrilicas y Press-on</h2>
+            <div class="product-image">
+<img src="Imagen3.jpg" alt=>
+             
+            </div>
+            <p><strong>Materiales:</strong>Tips para uñas, Deshidratador para uña natural, Nivelador de ph, Acrlico en polvo, Monomero, Toallitas para limpiar, Top coat, Sanitizante, Aceite para cuticula, Geles semipermanentes, Recina, Limas 150, 80 80 y Sponch</p>
+<p><strong>Instrumentos a utilizar: </strong> Godete,
+Empujador de cuticula,
+Tijera para cortar cuticula,
+Pincel original de cerdas Kolinsky,
+Pincel 3D,
+Pincel mano alzada
+Lampara led,
+Drill
+</p>            
+<p><strong>Elaboración:</strong> Nuestras uñas se hacen con productos de calidad, para el cuidado y bienestar de las uñas naturales, tratando que sean libres de quimicos.</p>
+            <p><strong>Uso:</strong> Ideal para traer unas uñas limpias y bellas.</p>
+        </div>
+
+        <!-- Pestaña Redes Sociales -->
+        <div id="redes-sociales" class="content">
+ <img src="Imagen2.jpg" alt=>
+            <h2>Síguenos en nuestras redes sociales</h2>
+            <div class="social-media">
+
+                <a href="https://www.facebook.com/share/15Gs2AXNch/?mibextid=LQQJ4d" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com/karla_may_nails/profilecard/?igsh=MTBxNXZla2NzMmEyag=="_blank">Instragram</a>
+                <a href="https://www.tiktok.com/@karlamaynails?_t=8rzjNQyawEP&_r=1" target="_blank">TikTok</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Ocultar todas las pestañas
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            // Desactivar todos los botones
+            document.querySelectorAll('.tab-link').forEach(button => {
+                button.classList.remove('active');
+            });
+            // Mostrar la pestaña seleccionada y activar el botón correspondiente
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`.tab-link[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
